@@ -8,7 +8,7 @@ const itemsnav=[
     {label:"Home"  ,href:"/"},
 {label:"Companion"  ,href:"/Companion"},
 {label:"My Journy"  ,href:"/my-journy"},
-    {label: "Sign In" ,href:"/Sign-In"},
+{label:"Subscription",href:"/Subscription"}  ,  
                ]
 
 
