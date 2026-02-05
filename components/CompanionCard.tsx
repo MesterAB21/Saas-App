@@ -25,7 +25,7 @@ const CompanionCard = ({id,name,topic,subject,duration,color}:companionCardProps
     <p className='text-sm'>{duration}minutes</p>
    </div>
    
-<Link className='w-full' href={`/companion/${id}`}>
+<Link className='w-full' href={`/Companion/${id}`}>
    <button className='btn-primary w-full justify-center' >Lunch Lesson</button>
 </Link>   
     

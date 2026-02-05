@@ -8,13 +8,14 @@ import { getSubjectColor } from "./ui/utils";
 interface CompaninonListProp{
   sessions?:Companion[];
   className?:string;
+  titel?:string
 }
 
-const CompanionList = ({sessions,className}:CompaninonListProp) => {
+const CompanionList = ({sessions,className,titel}:CompaninonListProp) => {
   return (
     
 <article className={cn('companion-list',className)}>
-   <h2 className="text-2xl">Recently completed lessons</h2>
+   <h2 className="text-2xl">{titel? titel:"Recently completed lessons"}</h2>
 <Table>
         <TableHeader className="">
           <TableRow>
@@ -26,7 +27,7 @@ const CompanionList = ({sessions,className}:CompaninonListProp) => {
         
         </TableHeader>
         <TableBody>
-         {sessions?.map(({id,colore,duration,subject,name,topic}) =>(
+         {sessions?.map(({id,duration,subject,name,topic}) =>(
 
               <TableRow key={id}
                 
