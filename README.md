@@ -64,4 +64,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+### Adding Environment Variables to Vercel
+
+**Important**: You must add the environment variables to your Vercel deployment for the app to build and run correctly.
+
+1. Go to your project on [Vercel Dashboard](https://vercel.com/dashboard)
+2. Navigate to **Settings** → **Environment Variables**
+3. Add each environment variable from your `.env.example` file:
+   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+   - `CLERK_SECRET_KEY`
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`
+   - `NEXT_PUBLIC_VAPI_WEB_TOKEN`
+   - `NEXT_PUBLIC_CLERK_SIGN_IN_URL` (optional)
+   - `NEXT_PUBLIC_CLERK_SIGN_UP_URL` (optional)
+   - `NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL` (optional)
+   - `NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL` (optional)
+4. Select which environments to apply them to (Production, Preview, Development)
+5. Click **Save**
+6. Redeploy your application for the changes to take effect
+
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
