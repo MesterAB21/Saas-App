@@ -7,6 +7,8 @@ import CTA from '@/components/CTA'
 import { getAllCompanion, getSessionHistory, getUserSessionHystory } from '@/lib/acrtion/companion.action'
 import { getSubjectColor } from '@/components/ui/utils'
 
+export const dynamic = 'force-dynamic'
+
 const Page = async () => {
    const recensession=await getSessionHistory(10);
    const companions= await getAllCompanion({limit:3})

@@ -10,6 +10,9 @@ import { getAllCompanion, getUserCompanion, getUserSessionHystory } from '@/lib/
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import CompanionList from '@/components/CompanionList';
+
+export const dynamic = 'force-dynamic'
+
 const profile = async() => {
   const user=await currentUser();
   if(!user){redirect("/sign-in")}
