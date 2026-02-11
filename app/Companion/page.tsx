@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import CompanionCard from '@/components/CompanionCard';
 import Searchinput from '@/components/Searchinput';
 import SubjectFilter from '@/components/SubjectFilter';

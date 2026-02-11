@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import CompanionForm from '@/components/CompanionForm'
 import { VerificationSub } from '@/lib/acrtion/companion.action'
 import { auth } from '@clerk/nextjs/server'

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import CompanionVoicSession from '@/components/CompanionVoicSession';
 import { getSubjectColor } from '@/components/ui/utils';
 import { getCompanion } from '@/lib/acrtion/companion.action'
