@@ -19,15 +19,17 @@ cp .env.example .env.local
 Then update the following environment variables in `.env.local`:
 
 - **Clerk Authentication**: Get your keys from [Clerk Dashboard](https://dashboard.clerk.com/last-active?path=api-keys)
-  - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
-  - `CLERK_SECRET_KEY`
+  - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` - **Required** for authentication
+  - `CLERK_SECRET_KEY` - **Required** for server-side authentication
 
 - **Supabase Database**: Get your keys from [Supabase Dashboard](https://supabase.com/dashboard/project/_/settings/api)
-  - `NEXT_PUBLIC_SUPABASE_URL`
-  - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`
+  - `NEXT_PUBLIC_SUPABASE_URL` - **Required** for database connection
+  - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY` - **Required** for database authentication
 
 - **Vapi AI**: Get your token from [Vapi.ai](https://vapi.ai)
-  - `NEXT_PUBLIC_VAPI_WEB_TOKEN`
+  - `NEXT_PUBLIC_VAPI_WEB_TOKEN` - **Required** for voice API
+
+> **Note**: All environment variables are required. You must replace the placeholder values with actual API keys from each service for the application to build and run properly.
 
 ### 3. Run the Development Server
 
