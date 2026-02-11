@@ -2,6 +2,7 @@
 import { auth } from "@clerk/nextjs/server"
 import { CreatSupabaseClient } from "../supabase";
 import Companion from "@/app/Companion/page";
+import { error } from "console";
 
 
 export  const   CreatCompanion= async (form:CreateCompanion)=>{
@@ -76,4 +77,19 @@ export const getUserCompanion=async(userid:string)=>{
     const {data,error}=await supabase.from('Companion').select().eq('author',userid)
      if(error) throw new Error(error.message);
      return data.map(row => row)
+}
+export const VerificationSub=async()=>{
+const {userId,has}=await auth();
+let limit=0;
+if(has({plan:"master"}))return true
+else{
+    if(has({feature:"3_active_companion"})) limit=3;
+    else{if(has({feature:"10active_companion"}))limit=10;}
+}
+const supabase=CreatSupabaseClient();
+const {data,error,count}=await supabase.from("Companion").select('id',{count:"exact"}).eq("author",userId);
+if(error) throw new Error(error.message);
+   if(limit<=count!){return false}
+   else return true
+
 }
