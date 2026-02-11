@@ -2,6 +2,35 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Environment Setup
+
+Copy the `.env.example` file to `.env.local` and fill in your API keys:
+
+```bash
+cp .env.example .env.local
+```
+
+Then update the following environment variables in `.env.local`:
+
+- **Clerk Authentication**: Get your keys from [Clerk Dashboard](https://dashboard.clerk.com/last-active?path=api-keys)
+  - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+  - `CLERK_SECRET_KEY`
+
+- **Supabase Database**: Get your keys from [Supabase Dashboard](https://supabase.com/dashboard/project/_/settings/api)
+  - `NEXT_PUBLIC_SUPABASE_URL`
+  - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY`
+
+- **Vapi AI**: Get your token from [Vapi.ai](https://vapi.ai)
+  - `NEXT_PUBLIC_VAPI_WEB_TOKEN`
+
+### 3. Run the Development Server
+
 First, run the development server:
 
 ```bash
