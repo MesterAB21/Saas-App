@@ -5,7 +5,7 @@ import { getSubjectColor } from '@/components/ui/utils';
 import { getAllCompanion } from '@/lib/acrtion/companion.action';
 import React from 'react'
 
-export const dynamic = 'force-dynamic'
+
 
 const   Companion= async({searchParams}:SearchParams)=>{
  const filter=await searchParams;
